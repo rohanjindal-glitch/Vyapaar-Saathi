@@ -6,7 +6,9 @@ const env = process.env;
 
 export const config = {
   port: Number(env.PORT) || 3000,
-  dbPath: env.DB_PATH || 'data/saathi.db',
+  dbPath: env.DB_PATH || (env.VERCEL ? '/tmp/saathi.db' : 'data/saathi.db'),
+  // serverless freezes after the response, so finish the rail call before replying there
+  execInline: env.EXEC_INLINE === 'true' || Boolean(env.VERCEL),
   sessionSecret: env.SESSION_SECRET || 'dev-secret-change-me',
   // simulated rail latency so the UI can show the "executing" state (0 in tests)
   execDelayMs: process.env.EXEC_DELAY_MS !== undefined ? Number(process.env.EXEC_DELAY_MS) : 900,
@@ -34,4 +36,5 @@ export const config = {
 
   rateLimitPerMin: Number(env.RATE_LIMIT_PER_MIN) || 240,
 };
+
 

@@ -134,6 +134,7 @@ export async function approve(m, id, method = 'tap') {
     .catch((e) => complete(id, { error: e.message, via: 'rail' }, 'failed'))
     .finally(() => inflight.delete(id));
   inflight.set(id, job);
+  if (config.execInline) await job;
   return serialize(load(m, id), m.lang);
 }
 
@@ -183,5 +184,6 @@ export function impactReport() {
   const holdout = avg('holdout');
   return { treatment, holdout, liftPts: treatment - holdout, merchants: rows, note: 'Measured on seeded synthetic data; needs post-action history in a real pilot.' };
 }
+
 
 
