@@ -133,7 +133,7 @@ app.post('/api/channels/whatsapp', wrap(async (req, res) => {
 }));
 // ---- static + errors -------------------------------------------------------------------------------
 const here = dirname(fileURLToPath(import.meta.url));
-app.use(express.static(join(here, '..', 'public')));
+app.use(express.static(join(here, '..', 'dist')));
 app.use((err, _req, res, _next) => {
   if (err instanceof HttpError) return res.status(err.status).json({ error: err.code, ...err.extra });
   console.error(err);
@@ -150,5 +150,6 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     console.log(`Rails ${railMode()} | Cognee ${config.cognee.url || 'off (local memory)'} | LLM ${llmEnabled() ? 'on' : 'off (rules + templates)'}`);
   });
 }
+
 
 
