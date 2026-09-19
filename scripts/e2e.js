@@ -1,4 +1,4 @@
-﻿// Smoke-test a RUNNING API: approves every action type for one merchant and prints how each was executed.
+// Smoke-test a RUNNING API: approves every action type for one merchant and prints how each was executed.
 //   node scripts/e2e.js [merchantId] [apiBase]
 const [merchantId = 'm_sharma', base = 'http://localhost:3000'] = process.argv.slice(2);
 const call = async (path, opts = {}, token) => {

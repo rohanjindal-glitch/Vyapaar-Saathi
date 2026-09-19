@@ -1,4 +1,4 @@
-﻿// Specialist agents. Each is a pure function over the Merchant-360 profile and returns ranked-able
+// Specialist agents. Each is a pure function over the Merchant-360 profile and returns ranked-able
 // opportunities. Growth negotiates with Inventory (stock check) and Customer (audience) before it
 // proposes, and records that negotiation in `trace` so the merchant can see why.
 import { config } from './config.js';

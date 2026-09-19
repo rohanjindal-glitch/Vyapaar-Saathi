@@ -1,4 +1,4 @@
-﻿import express from 'express';
+import express from 'express';
 import { createHmac, timingSafeEqual } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';

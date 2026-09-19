@@ -1,4 +1,4 @@
-﻿// UI strings. English is the fallback for anything not translated.
+// UI strings. English is the fallback for anything not translated.
 const en = {
   hello: 'Namaste', todaySoFar: 'Today so far', usually: 'vs usual by now', yesterday: 'Yesterday', last7: 'Last 7 days',
   last30: 'Last 30 days', last30sub: 'Weakest weekday highlighted', doToday: 'What to do today',

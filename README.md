@@ -1,4 +1,4 @@
-﻿# Vyapaar Saathi â€” merchant portal MVP
+# Vyapaar Saathi â€” merchant portal MVP
 
 Agentic AI business partner for Paytm merchants (Team Yantrika deck): **understand â†’ advise â†’ execute**, in the merchant's language, with a human approving every action. One central portal, one Node service, no external workflow engine.
 

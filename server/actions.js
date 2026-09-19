@@ -1,4 +1,4 @@
-﻿// Orchestrator + execution engine: ranks opportunities, persists them as proposals, runs the
+// Orchestrator + execution engine: ranks opportunities, persists them as proposals, runs the
 // consent/guardrail checks, dispatches approved actions to n8n, and measures outcomes against a holdout.
 import { randomUUID } from 'node:crypto';
 import { all, get, run, audit } from './db.js';

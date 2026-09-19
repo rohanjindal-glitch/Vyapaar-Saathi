@@ -1,4 +1,4 @@
-﻿import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { api, loadAll, setApiLang, setAuth } from './api.js';
 import { applyTheme, defaultLook, shuffleLook } from './theme.js';

@@ -1,4 +1,4 @@
-﻿// Voice Saathi / conversational entry point. Same brain for the web app, WhatsApp (via n8n) and
+// Voice Saathi / conversational entry point. Same brain for the web app, WhatsApp (via n8n) and
 // Soundbox voice: text in (already transcribed) -> intent -> grounded reply + optional pending action.
 import { all, get, run } from './db.js';
 import { merchant360 } from './analytics.js';

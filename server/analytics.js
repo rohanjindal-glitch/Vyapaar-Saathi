@@ -1,4 +1,4 @@
-﻿// "Merchant Brain" feature layer: turns raw txns into the Merchant-360 profile the agents reason over.
+// "Merchant Brain" feature layer: turns raw txns into the Merchant-360 profile the agents reason over.
 // In production this is the Kafka -> Spark/Delta -> Feast pipeline; here it is SQL + a short TTL cache
 // (the cache interface is the Redis seam).
 import { all, get } from './db.js';

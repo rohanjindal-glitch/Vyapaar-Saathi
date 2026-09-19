@@ -1,4 +1,4 @@
-﻿// Haikei-style generative SVG backgrounds (layered waves + soft blobs), generated locally so colours can
+// Haikei-style generative SVG backgrounds (layered waves + soft blobs), generated locally so colours can
 // follow the live theme (--wave-a / --wave-b / --sky / --accent). Waves use whole periods across the tile
 // width, so the drift animation loops seamlessly.
 import { motion } from 'motion/react';

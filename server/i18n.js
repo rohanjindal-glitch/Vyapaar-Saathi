@@ -1,4 +1,4 @@
-﻿// Server-side copy for chat replies, opportunity cards and briefs.
+// Server-side copy for chat replies, opportunity cards and briefs.
 // en / hi / hinglish are complete; mr / gu / ta / bn cover the core flow and fall back along FALLBACK.
 // Adding one of the other Indian languages = one more object here (or an LLM translate step, see README).
 const D = {

@@ -1,4 +1,4 @@
-﻿// Synthetic merchant universe. Stands in for the "anonymised merchant txn sandbox" the deck asks Paytm for.
+// Synthetic merchant universe. Stands in for the "anonymised merchant txn sandbox" the deck asks Paytm for.
 // Customer-driven generation: each customer has an activity profile, so segments (loyal / lapsed / new)
 // and the weekday dip emerge from the data instead of being hard-coded.
 import { fileURLToPath } from 'node:url';

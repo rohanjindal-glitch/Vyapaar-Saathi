@@ -1,4 +1,4 @@
-﻿process.env.DB_PATH = ':memory:';
+process.env.DB_PATH = ':memory:';
 process.env.SAATHI_NOW = '2026-09-22T11:30:00'; // a Tuesday
 process.env.EXEC_DELAY_MS = '0';
 process.env.ANTHROPIC_API_KEY = '';
