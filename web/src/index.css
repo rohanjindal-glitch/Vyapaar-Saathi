@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/* Design tokens are set at runtime by theme.js (sky blue + white + dynamic accent). Fallbacks = light sky. */
+:root {
+  --bg: hsl(200 70% 98%); --surface: #fff; --surface2: hsl(200 55% 95%); --ink: hsl(212 45% 14%); --muted: hsl(210 16% 40%);
+  --line: hsl(200 35% 88%); --primary: hsl(199 92% 36%); --on-primary: #fff; --primary-soft: hsl(199 90% 94%); --sky: hsl(199 88% 72%);
+  --accent: hsl(32 68% 42%); --accent-soft: hsl(32 80% 93%); --good: hsl(150 55% 28%); --warn: hsl(32 85% 34%); --bad: hsl(6 65% 42%);
+  --wave-a: hsl(199 85% 86%); --wave-b: hsl(32 85% 88%);
+  --font-display: system-ui, sans-serif; --font-body: system-ui, sans-serif;
+}
+
+@theme inline {
+  --color-bg: var(--bg); --color-surface: var(--surface); --color-surface2: var(--surface2); --color-ink: var(--ink); --color-muted: var(--muted);
+  --color-line: var(--line); --color-primary: var(--primary); --color-on-primary: var(--on-primary); --color-primary-soft: var(--primary-soft); --color-sky: var(--sky);
+  --color-accent: var(--accent); --color-accent-soft: var(--accent-soft); --color-good: var(--good); --color-warn: var(--warn); --color-bad: var(--bad);
+  --font-display: var(--font-display); --font-sans: var(--font-body);
+}
+
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); transition: background-color .4s, color .4s; }
+h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.01em; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+button, select, input { font: inherit; color: inherit; }
+.tabular { font-variant-numeric: tabular-nums; }
+.wrap-any { overflow-wrap: anywhere; }
+@media (prefers-reduced-motion: reduce) { * { animation-duration: .01ms !important; transition-duration: .01ms !important; } }

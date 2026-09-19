@@ -1,0 +1,18 @@
+# docker compose up --build   ->  portal + API on http://localhost:3000
+services:
+  api:
+    build: .
+    ports: ["3000:3000"]
+    environment:
+      SESSION_SECRET: ${SESSION_SECRET:-change-me}
+      COGNEE_URL: ${COGNEE_URL:-}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      WHATSAPP_TOKEN: ${WHATSAPP_TOKEN:-}
+      WHATSAPP_PHONE_ID: ${WHATSAPP_PHONE_ID:-}
+    volumes: ["api-data:/data"]
+
+  # Scaling out: run N `api` replicas behind a load balancer, swap db.js to Postgres, move the daily-brief
+  # scheduler to a single job runner, and put rail calls on a queue (BullMQ/SQS) instead of in-process promises.
+
+volumes:
+  api-data:
